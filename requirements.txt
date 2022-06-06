@@ -8,4 +8,3 @@ psycopg2==2.9.3
 requests==2.26.0
 SQLAlchemy==1.4.22
 streamlit==1.10.0
-~treamlit==1.9.0
