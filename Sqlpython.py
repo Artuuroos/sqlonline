@@ -22,12 +22,12 @@ import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-try:
-            conn = psycopg2.connect(dbname="dbticket", user="postgres", password="123456")
-            engine = create_engine('postgresql://postgres:123456@localhost:5432/dbticket')
-            cursor = conn.cursor()
 
-except:
+conn = psycopg2.connect(dbname="dbticket", user="postgres", password="1234")
+engine = create_engine('postgresql://postgres:123456@localhost:5432/dbticket')
+cursor = conn.cursor()
+
+
 
             print('Fehler bei der DB Verbindung !')
 
