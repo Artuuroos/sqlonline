@@ -270,7 +270,8 @@ while True:
 
     result.loc[len(result)]=[str(anfrage), alter_1, bahnkarteneu, start, ziel, datum, abfahrt_zv1, ankunft_zv1, art_zug_zv1,
                      sparpreis2_zv1]
-    result.to_sql(name="tabelle1", con=engine, if_exists="append" )
+    result.to_sql('tabelle', con=engine, 
+              schema='online', index=False, if_exists='append')
     result=result[0:0]
     #sheet.append_row([str(anfrage), alter_1, bahnkarteneu, start, ziel, datum, abfahrt_zv1, ankunft_zv1, art_zug_zv1,
                 #    sparpreis2_zv1])
